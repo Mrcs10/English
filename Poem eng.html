@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom Seagulls</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo" onclick="openTeamModal()">KCO</div>
+
+    <!-- Modal for team members -->
+    <div id="teamMembersModal" class="team-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTeamModal()">&times;</span>
+            <h2>Our Team Members</h2>
+            <ul>
+                <li>Leader: Marcus Sy </li>
+                <li>Jezreel Ann Ramos</li>
+                <li>John Lawrence Ona</li>
+                <li>Enrico Cabauatan</li>
+                <li>Maia Ysabela Ces</li>
+                <li>Alexa Daniella Matic</li>
+                <li>John Iverson Cunanan</li>
+                <li>Gerlaine Gonzales</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Quote Section -->
+    <div class="quote-box">
+        <p class="quote">“You have the freedom to be yourself, your true self, here and now, and nothing can stand in your way.”</p>
+    </div>
+
+    <!-- Main Container with Rotating Seagulls -->
+    <div class="container">
+        <div class="rotating-seagulls">
+            <!-- Seagull Images -->
+            <div class="seagull" id="seagull1"><img src="1-removebg-preview.png" alt="Seagull 1"></div>
+            <div class="seagull" id="seagull2"><img src="6-removebg-preview.png" alt="Seagull 2"></div>
+            <div class="seagull" id="seagull3"><img src="2-removebg-preview.png" alt="Seagull 3"></div>
+            <div class="seagull" id="seagull4"><img src="8-removebg-preview.png" alt="Seagull 4"></div>
+            <div class="seagull" id="seagull5"><img src="4-removebg-preview.png" alt="Seagull 5"></div>
+            <div class="seagull" id="seagull6"><img src="5-removebg-preview.png" alt="Seagull 6"></div>
+            <div class="seagull" id="seagull7"><img src="7-removebg-preview.png" alt="Seagull 7"></div>
+            <div class="seagull" id="seagull8"><img src="3-removebg-preview.png" alt="Seagull 8"></div>
+        </div>
+    </div>
+
+    <!-- Modal for Poem Display -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <p id="poem-text">This is where the poem will appear when a seagull is clicked.</p>
+        </div>
+    </div>
+
+    <!-- Buttons Section -->
+<div class="bottom-right-buttons">
+    <button class="action-btn" id="about-us-btn">About Us</button>
+    <button class="action-btn" id="contact-us-btn">Contact Us</button>
+    <button class="action-btn" id="read-jonathan-btn">Read Jonathan Livingston Seagull</button>
+</div>
+
+<!-- About Us Modal -->
+<div id="aboutUsModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('aboutUsModal')">&times;</span>
+        <p>We are Group 2, and this is our presentation.</p>
+    </div>
+</div>
+
+<!-- Contact Us Modal -->
+<div id="contactUsModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('contactUsModal')">&times;</span>
+        <h2>Contact Us</h2>
+        <div class="contact-item">
+            <img src="fb.png" alt="Facebook Logo">
+            <span>Facebook: Marcus Sy</span>
+        </div>
+        <div class="contact-item">
+            <img src="ig.webp" alt="Instagram Logo">
+            <span>Instagram: Marcus Sy</span>
+        </div>
+        <div class="contact-item">
+            <img src="m.png" alt="Email Logo">
+            <span>Email: symarcusantonio@gmail.com</span>
+        </div>
+    </div>
+</div>
+
+<div class="music-container">
+    <button id="play-music" class="music-btn">Play Music</button>
+    <audio id="background-music" loop>
+        <source src="Chill Guy Theme (Hinoki Wood).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>

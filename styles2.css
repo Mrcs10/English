@@ -1,0 +1,386 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('cloud.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.logo {
+    position: absolute;
+    top: 90px; /* Distance from the top */
+    left: 5%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering the element */
+    font-size: 12rem; /* Increase font size for a larger effect */
+    font-family: 'Arial', sans-serif; /* Using Arial, replace with desired font */
+    font-weight: bold; /* Ensures the text is thick */
+    color: #363234; /* Soft pink color for a friendly and playful vibe */
+    letter-spacing: -0.05em; /* Adjust for tighter spacing */
+    text-transform: uppercase; /* Optional, for an all-caps look */
+    text-align: center; /* Ensure text is aligned */
+    text-shadow: 
+        4px 4px 6px rgba(0, 0, 0, 0.3), 
+        6px 6px 8px rgba(0, 0, 0, 0.3),
+        8px 8px 10px rgba(0, 0, 0, 0.3); /* Adding 3D shadow effect for depth */
+    animation: bounce 1s infinite alternate; /* Bounce animation for a dynamic feel */
+}
+
+/* Animation to create a bouncing effect */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Make it bounce higher */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header-text {
+        font-size: 6rem; /* Smaller font size on mobile */
+        left: 10px; /* Adjust left position */
+    }
+}
+
+/* Team Members Modal (hidden by default) */
+.team-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+/* Modal content */
+.team-modal .modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Team members list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Quote Box */
+.quote-box {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+}
+
+.quote {
+    font-style: italic;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px; /* Increased container width */
+    height: 800px; /* Increased container height */
+    position: absolute;
+    top: 100%; /* Adjusted to move seagulls lower */
+    transform: translateY(-50%); /* Ensures it's centered vertically */
+    z-index: 10;
+}
+
+/* Rotating Seagulls */
+.rotating-seagulls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 30s infinite linear;
+}
+
+.seagull {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    transform-origin: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, scale 0.2s ease-in-out;
+}
+
+/* Seagull Positions */
+.seagull img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Interactive Seagull Hover */
+.seagull:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframe for Rotation */
+@keyframes rotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+/* Seagull Positioning - More spacing and lower positioning */
+#seagull1 { transform: rotateY(0deg) translateZ(350px) translateY(100px); }
+#seagull2 { transform: rotateY(45deg) translateZ(350px) translateY(100px); }
+#seagull3 { transform: rotateY(90deg) translateZ(350px) translateY(100px); }
+#seagull4 { transform: rotateY(135deg) translateZ(350px) translateY(100px); }
+#seagull5 { transform: rotateY(180deg) translateZ(350px) translateY(100px); }
+#seagull6 { transform: rotateY(225deg) translateZ(350px) translateY(100px); }
+#seagull7 { transform: rotateY(270deg) translateZ(350px) translateY(100px); }
+#seagull8 { transform: rotateY(315deg) translateZ(350px) translateY(100px); }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 70%;
+    max-width: 600px; /* Slightly wider to accommodate long poems */
+    max-height: 80%; /* Limit the modal height */
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Enable vertical scrolling */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#poem-text {
+    font-size: 20px; /* Larger font size for better readability */
+    line-height: 1.8; /* Increased line spacing for better flow */
+    color: #4a90e2; /* Soft blue color to match the theme of the sky */
+    font-family: 'Georgia', serif; /* Elegant serif font for a poetic feel */
+    white-space: pre-wrap; /* Preserve poem formatting */
+    text-align: center; /* Justify the text */
+    padding: 20px 30px; /* More padding for better spacing around the text */
+    margin-top: 10px;
+    letter-spacing: 0.5px; /* Slightly increased letter spacing for clarity */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 10px; /* Rounded corners for the poem box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+    overflow-y: auto; /* Enable scrolling if the poem is long */
+}
+
+#poem-text::before {
+    content: '“'; /* Opening quote */
+    font-size: 40px;
+    color: #f39c12; /* Warm golden color for the quote mark */
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+#poem-text::after {
+    content: '”'; /* Closing quote */
+    font-size: 40px;
+    color: #f39c12; /* Warm golden color for the quote mark */
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Bottom-right buttons */
+.bottom-right-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #87CEEB; /* Sky blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.action-btn:hover {
+    background-color: #4682B4; /* Deep sky blue */
+    transform: scale(1.05);
+}
+
+/* Info modals */
+.info-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(135, 206, 250, 0.8); /* Semi-transparent sky blue */
+    overflow: auto;
+    padding-top: 60px;
+    font-family: 'Georgia', serif;
+}
+
+.info-modal .modal-content {
+    background: linear-gradient(to bottom, #ffffff, #dfefff); /* Subtle gradient for a cloudy feel */
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #aaa;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Depth effect */
+}
+
+.close-btn {
+    color: #666;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Contact details styling */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Circular logos */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button and modal fonts */
+h2 {
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p, span {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+.music-container {
+    position: absolute;
+    top: 190px; /* Adjust based on quote position */
+    right: 20%; /* Spacing from the right */
+    z-index: 10; /* Ensure it appears on top */
+}
+
+.music-btn {
+    background-color: #87CEEB; /* Sky blue */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.music-btn:hover {
+    background-color: #4682B4; /* Deep sky blue */
+    transform: scale(1.1);
+}
+
